@@ -41,3 +41,11 @@ docker-compose exec app php artisan queue:work
 
     language - язык, два символа (не обязательное)
     timezone - временная зона, от -12 до 12 (UTC) (не обязательное)
+
+<hr>
+
+### Тестирование
+
+```shell
+docker-compose exec app php artisan test
+```
