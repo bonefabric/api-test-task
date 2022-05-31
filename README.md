@@ -6,6 +6,8 @@ git clone https://github.com/bonefabric/api-test-task.git
 2. Перейти в директорию проекта и становить зависимости
 ```shell
 cd api-test-task
+```
+```shell
 composer install
 
 ```
