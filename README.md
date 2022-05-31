@@ -1,3 +1,14 @@
+## Деплой
+1. Склонировать репозиторий
+2. В директории проекта поднять контейнеры:
+```shell
+docker-compose up -d
+```
+3. Запустить миграции
+```shell
+docker-compose exec app php artisan migrate
+```
+
 ## Регистрация:
 
     POST /api/v1/register
