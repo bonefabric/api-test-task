@@ -3,7 +3,12 @@
 ```shell
 git clone https://github.com/bonefabric/api-test-task.git
 ```
-2. Перейти в директорию проекта и становить зависимости
+2. Скопировать .env.example в .env, куда вписать по мере надобности
+переменные окружения. Либо скопировать командой
+```shell
+php -r "file_exists('.env') || copy('.env.example', '.env');"
+```
+4. Перейти в директорию проекта и становить зависимости
 ```shell
 cd api-test-task
 ```
