@@ -1,30 +1,34 @@
 ## Деплой
+
 1. Склонировать репозиторий
 ```shell
 git clone https://github.com/bonefabric/api-test-task.git
 ```
-2. Скопировать .env.example в .env, куда вписать по мере надобности
-переменные окружения. Либо скопировать командой
-```shell
-php -r "file_exists('.env') || copy('.env.example', '.env');"
-```
-4. Перейти в директорию проекта и становить зависимости
+
+2. Перейти в директорию проекта и скопировать .env.example в .env, куда вписать по мере надобности
+   переменные окружения. Либо скопировать командой
 ```shell
 cd api-test-task
 ```
 ```shell
-composer install
-
+php -r "file_exists('.env') || copy('.env.example', '.env');"
 ```
-3. Поднять контейнеры:
+
+3. Установить зависимости
+
+```shell
+composer install
+```
+
+4. Поднять контейнеры:
 ```shell
 docker-compose up -d
 ```
-3. Запустить миграции
+5. Запустить миграции
 ```shell
 docker-compose exec app php artisan migrate
 ```
-4. Запустить воркер
+6. Запустить воркер
 ```shell
 docker-compose exec app php artisan queue:work
 ```
