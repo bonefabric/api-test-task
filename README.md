@@ -54,7 +54,7 @@ docker-compose exec app php artisan queue:work
 В случае удачи вернет объект с ключом token, содержащим Bearer токен
 
 ## Смена настроек
-(Необходима авторизация)
+(Необходима авторизация Bearer - токеном)
 
     PUT /api/v1/change-settings
 Требуемые поля:
