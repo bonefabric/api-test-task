@@ -19,6 +19,8 @@ class RegisterAction extends ApiController
     public function __invoke(RegisterRequest $registerRequest)
     {
         $data = $registerRequest->validated();
+
+        // Создаем задачу для отправки письма а регистрации
         $this->dispatch(new SendWelcomeEmail($user = User::create([
             'email' => $data['email'],
             'password' => Hash::make($data['password'])

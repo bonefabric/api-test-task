@@ -8,6 +8,10 @@ docker-compose up -d
 ```shell
 docker-compose exec app php artisan migrate
 ```
+4. Запустить воркер
+```shell
+docker-compose exec app php artisan queue:work
+```
 
 ## Регистрация:
 
