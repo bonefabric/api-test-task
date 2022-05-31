@@ -11,7 +11,7 @@ cd api-test-task
 composer install
 
 ```
-3. В директории проекта поднять контейнеры:
+3. Поднять контейнеры:
 ```shell
 docker-compose up -d
 ```
